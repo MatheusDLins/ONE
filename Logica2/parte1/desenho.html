@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+
+        //atribuindo o canvas a variavel tela
+        var tela = document.querySelector("canvas");
+        //criando um pincel para a tela em 2d
+        var pincel = tela.getContext("2d");
+        //definindo a cor do pincel
+        pincel.fillStyle = "lightgrey";
+        //pintar um retangulo
+        pincel.fillRect(0, 0, 600, 400);
+
+        pincel.fillStyle = "green";
+        pincel.fillRect(0, 0, 200, 400);
+
+        pincel.fillStyle = "red";
+        pincel.fillRect(400, 0, 200, 400);
+
+        pincel.fillStyle = "yellow";
+        //aqui vamos fazer um caminho para o pincel percorrer
+        pincel.beginPath();
+        //definimos o ponto inicial
+        pincel.moveTo(300, 200);
+        //define o final da linha
+        pincel.lineTo(200, 400);
+        pincel.lineTo(400, 400);
+        //ocupar o espaço escolhido
+        pincel.fill();
+
+        pincel.fillStyle = "blue";
+        //vamos definir novamente o inicio da linha
+        pincel.beginPath();
+        //vamos fazer uma bola
+        pincel.arc(300,200,50,0,2*3.14);
+        pincel.fill();
+
+
+
+        
+        
+
+    </script>
+</body>
+</html>

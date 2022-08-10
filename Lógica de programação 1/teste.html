@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Clique aqui!</button>
+
+
+<script>
+    var segredo = [1,2,3]
+    segredo.push(1)
+    //ligando o input do html a uma variavel
+    var input = document.querySelector('input');
+
+    //função para verificar se o numero é igual
+    function verifica(){
+        //o input.value vai pegar o valor digitado  
+        if(input.value in segredo) {
+            alert('Acertou!');
+        }else{
+            alert('errou!')
+        }
+        //aqui iremos limpar a caixa onde digita o valor
+        input.value ="";
+        //a função focus faz com que a caixa fique selecionada para não precisar clicar novamente
+        input.focus();
+    }
+
+    //variavel para o botão
+    var button = document.querySelector('button');
+    //se clicar ele retorna a função;
+    button.onclick = verifica;
+
+
+
+</script>
